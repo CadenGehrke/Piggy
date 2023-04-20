@@ -58,7 +58,15 @@ class Piggy(PiggyParent):
     ****************
     '''
     def Gehrke(self):
-      print("Do something")
+      self.fwd()
+      self.sleep(2)
+      self.right()
+      self.sleep()
+      self.right()
+      self.sleep()
+      self.stop()
+
+  
     def dance(self):
         """A higher-ordered algorithm to make your robot dance"""
         # TODO: check to see if it's safe before dancing
