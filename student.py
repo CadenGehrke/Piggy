@@ -59,7 +59,7 @@ class Piggy(PiggyParent):
     '''
     def gehrke(self):
       self.fwd()
-      self.sleep(2)
+      time.sleep(2)
       self.right()
       self.sleep()
       self.right()
