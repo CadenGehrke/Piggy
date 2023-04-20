@@ -41,6 +41,7 @@ class Piggy(PiggyParent):
                 "f": ("Follow", self.follow),
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit)
+                "g": ("Gehrke", self.Gehrke)
                 
                 }
         # loop and print the menu...
@@ -57,7 +58,7 @@ class Piggy(PiggyParent):
     ****************
     '''
     def Gehrke(self):
-      pass
+      print("Do something")
     def dance(self):
         """A higher-ordered algorithm to make your robot dance"""
         # TODO: check to see if it's safe before dancing
