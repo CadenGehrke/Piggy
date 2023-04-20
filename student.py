@@ -40,7 +40,7 @@ class Piggy(PiggyParent):
                 "s": ("Shy", self.shy),
                 "f": ("Follow", self.follow),
                 "c": ("Calibrate", self.calibrate),
-                "q": ("Quit", self.quit)
+                "q": ("Quit", self.quit),
                 "g": ("gehrke", self.gehrke)
                 
                 }
