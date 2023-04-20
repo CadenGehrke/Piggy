@@ -41,7 +41,7 @@ class Piggy(PiggyParent):
                 "f": ("Follow", self.follow),
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit)
-                "g": ("Gehrke", self.Gehrke)
+                "g": ("gehrke", self.gehrke)
                 
                 }
         # loop and print the menu...
@@ -57,7 +57,7 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
-    def Gehrke(self):
+    def gehrke(self):
       self.fwd()
       self.sleep(2)
       self.right()
