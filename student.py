@@ -58,14 +58,14 @@ class Piggy(PiggyParent):
     ****************
     '''
     def gehrke(self):
-      for x in range(4)
-      self.fwd()
-      time.sleep()
-      self.stop()
-  
-      self.right()
-      time.sleep()
-      self.stop()
+      for x in range(4):
+        self.fwd()
+        time.sleep()
+        self.stop()
+    
+        self.right()
+        time.sleep()
+        self.stop()
 
   
     def dance(self):
