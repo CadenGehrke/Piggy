@@ -57,6 +57,39 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
+
+    def stopwall(self):
+      while True:
+        for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 100):
+          self.servo(ang)
+          time.sleep(.1)
+          if self.read_distance() < 250:
+            self.stop
+
+    def wallloop(self):
+      while True:
+        self.fwd()
+        for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 100):
+          self.servo(ang)
+          time.sleep(.1)
+          if self.read_distance() < 250:
+            self.right()
+            time.sleep(2)
+            self.stop()
+  
+    def safe_to_dance(self):
+      self.servo(ang)
+      time.sleep(0.1)
+       if self.read_distance() < 250:
+         self.dance()
+       else self.right()
+            time.sleep()
+      self.right()
+      time.sleep(4)
+      self.stop
+
+
+  
     def gehrke(self):
       for x in range(4):
         self.fwd()
@@ -71,11 +104,19 @@ class Piggy(PiggyParent):
     def dance(self):
         """A higher-ordered algorithm to make your robot dance"""
         # TODO: check to see if it's safe before dancing
-        
-        # lower-ordered example...
-        self.right(primary=50, counter=50)
-        time.sleep(2)
-        self.stop()
+       while True:
+            for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 100):
+                self.servo(ang)
+                time.sleep(.1)
+                if self.read_distance() > 250:
+                  self.right(primary=50, counter=50)
+                  time.sleep(2)
+                  self.stop()
+                else self.read_distance() > 250
+                  self.back()
+                  time.sleep(0.5)
+                  
+                
 
     def safe_to_dance(self):
         """ Does a 360 distance check and returns true if safe """
