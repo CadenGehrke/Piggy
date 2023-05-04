@@ -80,7 +80,8 @@ class Piggy(PiggyParent):
     def safe_to_dance(self):
       pass
       
- """   self.servo(ang)
+ """
+    self.servo(ang)
       time.sleep(0.1)
       if self.read_distance() < 250:
         self.dance()
