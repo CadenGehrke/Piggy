@@ -102,8 +102,20 @@ class Piggy(PiggyParent):
 
   
     def dance(self):
-        """A higher-ordered algorithm to make your robot dance"""
+      for x in range(4):
+      self.right()
+      time.sleep()
+
+      self.left()
+      self.sleep()
+
+          """A higher-ordered algorithm to make your robot dance"""
         # TODO: check to see if it's safe before dancing
+                  
+                
+
+    def safe_to_dance(self):
+        """ Does a 360 distance check and returns true if safe """
        while True:
             for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 100):
                 self.servo(ang)
@@ -114,13 +126,8 @@ class Piggy(PiggyParent):
                   self.stop()
                 else self.read_distance() > 250
                   self.back()
-                  time.sleep(0.5)
-                  
-                
-
-    def safe_to_dance(self):
-        """ Does a 360 distance check and returns true if safe """
-        pass
+                  time.sleep(0.5)  pass
+         pass
 
     def shake(self):
         """ Another example move """
