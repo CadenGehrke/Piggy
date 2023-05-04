@@ -78,16 +78,18 @@ class Piggy(PiggyParent):
             self.stop()
   
     def safe_to_dance(self):
-      self.servo(ang)
+      pass
+      
+ """   self.servo(ang)
       time.sleep(0.1)
       if self.read_distance() < 250:
         self.dance()
-        else self.right()
+      else self.right()
         time.sleep()
         self.right()
         time.sleep(4)
         self.stop
-  
+  """
 
   
     def gehrke(self):
