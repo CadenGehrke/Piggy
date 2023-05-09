@@ -115,8 +115,8 @@ class Piggy(PiggyParent):
             self.right()
             time.sleep(1)
             for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 100):
-            self.servo(ang)
-            time.sleep(.1)
+              self.servo(ang)
+              time.sleep(.1)
           
 
 
