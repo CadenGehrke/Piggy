@@ -99,9 +99,6 @@ class Piggy(PiggyParent):
 
         self.left()
         self.sleep()
-
-          """A higher-ordered algorithm to make your robot dance"""
-        # TODO: check to see if it's safe before dancing
                   
                 
 
