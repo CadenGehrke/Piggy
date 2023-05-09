@@ -60,23 +60,23 @@ class Piggy(PiggyParent):
 
     def stopwall(self):
       while True:
-        for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 100):
-          self.servo(ang)
-          time.sleep(.1)
           if self.read_distance() < 250:
             self.stop
 
     def wallloop(self):
       while True:
         self.fwd()
-        for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 100):
-          self.servo(ang)
-          time.sleep(.1)
-          if self.read_distance() < 250:
-            self.right()
-            time.sleep(2)
-            self.stop()
-  
+        time.sleep()
+        if self.read_distance() < 250:
+          self.stopwall()
+          self.right()
+          time.sleep(2)
+        
+        
+
+        
+      
+
     def safe_to_dance(self):
       pass
 
@@ -103,7 +103,6 @@ class Piggy(PiggyParent):
                 
 
     def safe_to_dance(self):
-      
         """ Does a 360 distance check and returns true if safe """
       while True:
         
