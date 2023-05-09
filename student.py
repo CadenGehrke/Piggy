@@ -71,11 +71,10 @@ class Piggy(PiggyParent):
     def wallloop(self):
       while True:
         self.fwd()
-        time.sleep()
         if self.read_distance() < 250:
-          self.stopwall()
           self.right()
           time.sleep(2)
+
         
         
 
