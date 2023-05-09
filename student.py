@@ -41,7 +41,7 @@ class Piggy(PiggyParent):
                 "f": ("Follow", self.follow),
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
-                "g": ("gehrke", self.gehrke)
+                "g": ("gehrke", self.gehrke),
                 "s": ("stopwall", self.stopwall)
                 
                 }
@@ -61,6 +61,7 @@ class Piggy(PiggyParent):
 
     def stopwall(self):
       while True:
+          self.fwd()
           if self.read_distance() < 250:
             self.stop
 
