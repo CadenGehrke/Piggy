@@ -83,8 +83,12 @@ class Piggy(PiggyParent):
         
       
 
-    def safe_to_dance(self):
-      pass
+    def dance(self):
+      for x in range(8)
+      self.right()
+      time.sleep(0.25)
+      self.left()
+      time.sleep(0.25)
 
   
     def gehrke(self):
@@ -109,17 +113,17 @@ class Piggy(PiggyParent):
                 
 
     def safe_to_dance(self):
-      while True:
         for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 100):
           self.servo(ang)
           time.sleep(.1)
           if self.read_distance() > 250:
-            self.right(primary=50, counter=50)
-            time.sleep(2)
-            self.stop()
-          elif self.read_distance() > 250:
-            self.back()
-            time.sleep(0.5)
+            self.right()
+            time.sleep(1)
+            for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 100):
+            self.servo(ang)
+            time.sleep(.1)
+          
+
 
     def shake(self):
         """ Another example move """
