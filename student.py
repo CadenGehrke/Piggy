@@ -113,8 +113,7 @@ class Piggy(PiggyParent):
             self.stop()
           elif self.read_distance() > 250:
             self.back()
-            time.sleep(0.5)  pass
-       pass
+            time.sleep(0.5)
 
     def shake(self):
         """ Another example move """
