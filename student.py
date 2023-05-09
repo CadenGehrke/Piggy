@@ -60,9 +60,8 @@ class Piggy(PiggyParent):
     '''
 
     def stopwall(self):
+      self.fwd()
       while True:
-        
-        self.fwd()
         if self.read_distance() < 250:
           self.stop
 
