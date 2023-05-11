@@ -44,6 +44,7 @@ class Piggy(PiggyParent):
                 "g": ("gehrke", self.gehrke),
                 "s": ("stopwall", self.stopwall),
                 "w": ("wallloop", self.wallloop)
+                "sd": ("safe_to_dance", self.safe_to_dance)
                 
                 
                 }
