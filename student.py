@@ -106,6 +106,7 @@ class Piggy(PiggyParent):
   
           self.left()
           time.sleep(1)
+        break
                     
                 
 
