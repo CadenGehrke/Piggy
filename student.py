@@ -109,14 +109,10 @@ class Piggy(PiggyParent):
                 
 
     def safe_to_dance(self):
-      for x in range(4):
-        for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 100):
-          self.servo(ang)
-          time.sleep(.1)
-          if self.read_distance() > 250:
-            self.right
-            time.sleep(1)
-          
+      for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 100):
+                self.servo(ang)
+                time.sleep(.1)
+        
 
 
     def shake(self):
