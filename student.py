@@ -43,7 +43,7 @@ class Piggy(PiggyParent):
                 "q": ("Quit", self.quit),
                 "g": ("gehrke", self.gehrke),
                 "s": ("stopwall", self.stopwall),
-                "w": ("wallloop", self.wallloop)
+                "w": ("wallloop", self.wallloop),
                 "sd": ("safe_to_dance", self.safe_to_dance)
                 
                 
