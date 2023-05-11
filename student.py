@@ -98,13 +98,14 @@ class Piggy(PiggyParent):
 
   
     def dance(self):
-      for x in range(4):
-        self.right()
-        time.sleep(1)
-
-        self.left()
-        self.sleep(1)
-                  
+      if self.read_distance() > 250:
+        for x in range(4):
+          self.right()
+          time.sleep(1)
+  
+          self.left()
+          time.sleep(1)
+                    
                 
 
     def safe_to_dance(self):
