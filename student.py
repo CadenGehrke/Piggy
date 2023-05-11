@@ -114,7 +114,7 @@ class Piggy(PiggyParent):
                 self.servo(ang)
                 time.sleep(.1)
                 if self.read_distance() < 250:
-                  self.quit()
+                  self.stop()
                   break
                 elif self.read_distance() > 250:
                   self.right()
