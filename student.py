@@ -108,7 +108,7 @@ class Piggy(PiggyParent):
                 
 
     def safe_to_dance(self):
-      for x in range(4) 
+      for x in range(4):
         for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 100):
           self.servo(ang)
           time.sleep(.1)
