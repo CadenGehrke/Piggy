@@ -119,7 +119,7 @@ class Piggy(PiggyParent):
                   self.stop()
                   break
                 elif self.read_distance() > 250:
-                  print(rocks)
+                  print("rocks")
                   self.dance()
 
   
