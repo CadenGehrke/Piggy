@@ -44,7 +44,7 @@ class Piggy(PiggyParent):
                 "g": ("gehrke", self.gehrke),
                 "s": ("stopwall", self.stopwall),
                 "w": ("wallloop", self.wallloop),
-                "sd": ("safe_to_dance", self.safe_to_dance)
+                "t": ("twall", self.twall)
                 
                 
                 }
@@ -81,15 +81,15 @@ class Piggy(PiggyParent):
         
    def twall(self):
      while True:
+     self.fwd()
+     time.sleep()
+     if self.read_distance() < 250:
+       self.right()
+       time.sleep(0.25)
        self.fwd()
+       time.sleep(0.5)
+       self.right()
        time.sleep()
-       if self.read_distance() < 250:
-         self.right()
-         time.sleep(0.25)
-         self.fwd()
-         time.sleep(0.5)
-         self.right()
-         time.sleep()
          
          
        
