@@ -118,7 +118,10 @@ class Piggy(PiggyParent):
                   break
                 elif self.read_distance() > 250:
                   self.right()
-                  time.sleep(1)
+                  time.sleep(0.5)
+                  self.dance()
+
+  
                   
                   
                   
