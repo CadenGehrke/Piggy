@@ -112,7 +112,7 @@ class Piggy(PiggyParent):
     def safe_to_dance(self):
       for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 100):
                 self.servo(ang)
-                time.sleep(.1)
+                time.sleep(.01)
                 if self.read_distance() < 250:
                   self.stop()
                   break
