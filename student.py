@@ -80,11 +80,11 @@ class Piggy(PiggyParent):
 
         
    def twall(self):
-     while True:
-     self.fwd()
-     time.sleep()
-     if self.read_distance() < 250:
-       self.right()
+    while True:
+      self.fwd()
+      time.sleep()
+      if self.read_distance() < 250:
+        self.right()
        time.sleep(0.25)
        self.fwd()
        time.sleep(0.5)
