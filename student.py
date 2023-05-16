@@ -89,15 +89,7 @@ class Piggy(PiggyParent):
           time.sleep(0.5)
           self.right()
           time.sleep()
-             
-    def twall(self):
-     
 
-    
-
-
-
-  
     def dance(self):
         if self.safe_to_dance():
           self.right()
