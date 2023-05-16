@@ -91,7 +91,7 @@ class Piggy(PiggyParent):
           time.sleep(0.5)
     def ce(self):
       while True:
-        self.serve(self.MIDPOINT)
+        self.servo(self.MIDPOINT)
         self.fwd()
         if self.read_distance() < 250:
           self.stop()
