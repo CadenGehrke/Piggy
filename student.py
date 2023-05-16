@@ -121,6 +121,7 @@ class Piggy(PiggyParent):
           
     def corn(self):
       while True:
+        self.servo(self.MIDPOINT)
         self.fwd()
         if self.read_distance() < 100:
           self.stop()
