@@ -43,7 +43,8 @@ class Piggy(PiggyParent):
                 "q": ("Quit", self.quit),
                 "s": ("stopwall", self.stopwall),
                 "w": ("wallloop", self.wallloop),
-                "t": ("twall", self.twall)
+                "t": ("twall", self.twall),
+                "e": ("ce", self.ce)
                 
                 
                 }
