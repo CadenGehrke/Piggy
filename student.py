@@ -126,10 +126,10 @@ class Piggy(PiggyParent):
         if self.read_distance() < 100:
           self.stop()
           self.servo(1000)
-          time.sleep(0.2)
+          time.sleep(0.5)
           RI = self.read_distance()
           self.servo(2000)
-          time.sleep(0.2)
+          time.sleep(0.5)
           LE = self.read_distance()
           if LE < RI:
             self.right()
