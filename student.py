@@ -37,7 +37,7 @@ class Piggy(PiggyParent):
         menu = {"n": ("Navigate", self.nav),
                 "d": ("Dance", self.dance),
                 "o": ("Obstacle count", self.obstacle_count),
-                "s": ("Shy", self.shy),
+                "b": ("Shy", self.shy),
                 "f": ("Follow", self.follow),
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
@@ -88,6 +88,13 @@ class Piggy(PiggyParent):
           time.sleep(1)
           self.left()
           time.sleep(0.5)
+    def ce(self):
+      while True:
+        self.fwd()
+        if self.read_distance() < 250:
+          self.stop()
+          
+      
 
     def dance(self):
         if self.safe_to_dance():
