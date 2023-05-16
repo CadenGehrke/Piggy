@@ -118,7 +118,22 @@ class Piggy(PiggyParent):
             time.sleep(1)
             
           
-      
+    def corn(self):
+      while True:
+        self.fwd()
+        if self.read_distance() < 250:
+          self.servo(1000)
+          if self.read_distance() < 250:
+            self.servo(2000)
+            if self.read_distance() > 250: 
+              pass
+          elif self.read_distnace() > 250:
+            pass
+            
+              
+          
+        
+  
 
     def dance(self):
         if self.safe_to_dance():
