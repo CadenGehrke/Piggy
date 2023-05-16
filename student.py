@@ -41,7 +41,6 @@ class Piggy(PiggyParent):
                 "f": ("Follow", self.follow),
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
-                "g": ("gehrke", self.gehrke),
                 "s": ("stopwall", self.stopwall),
                 "w": ("wallloop", self.wallloop),
                 "t": ("twall", self.twall)
@@ -96,16 +95,7 @@ class Piggy(PiggyParent):
 
     
 
-  
-    def gehrke(self):
-      for x in range(4):
-        self.fwd()
-        time.sleep(2)
-        self.stop()
-    
-        self.right()
-        time.sleep(0.9)
-        self.stop()
+
 
   
     def dance(self):
