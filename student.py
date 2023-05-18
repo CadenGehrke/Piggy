@@ -46,7 +46,7 @@ class Piggy(PiggyParent):
                 "t": ("twall", self.twall),
                 "e": ("ce", self.ce),
                 "co": ("corn", self.corn),
-                "sw": ("sw", self.swerve)
+                "sw": ("swerve", self.swerve)
                 
                 
                 }
