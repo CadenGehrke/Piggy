@@ -146,18 +146,11 @@ class Piggy(PiggyParent):
           for ang in range(self.MIDPOINT-400, 100):
                 self.servo(ang)
                 time.sleep(.1)
-                if self.read_distance():
-                  pass
+
+                 
 
 
-          
-          
-          
-          
 
-              
-          
-        
   
 
     def dance(self):
