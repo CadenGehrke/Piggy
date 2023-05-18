@@ -45,8 +45,8 @@ class Piggy(PiggyParent):
                 "w": ("wallloop", self.wallloop),
                 "t": ("twall", self.twall),
                 "e": ("ce", self.ce),
-                "co": ("corn", self.corn),
-                "sw": ("swerve", self.swerve)
+                "co": ("corn", self.corn)
+
                 
                 
                 }
@@ -140,12 +140,6 @@ class Piggy(PiggyParent):
             
 
 
-      def swerve(self):
-        while True:
-          self.fwd()
-          for ang in range(self.MIDPOINT-400, 100):
-                self.servo(ang)
-                time.sleep(.1)
 
                  
 
