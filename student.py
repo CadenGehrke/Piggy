@@ -134,11 +134,9 @@ class Piggy(PiggyParent):
           time.sleep(1)
           LE = self.read_distance()
           if LE < RI:
-            self.turn_by_deg()
-            time.sleep(80)
+            self.turn_by_deg(80)
           elif LE > RI:
-            self.turn_by_deg()
-            time.sleep(-80)
+            self.turn_by_deg(-80)
             
 
         
