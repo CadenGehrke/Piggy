@@ -51,7 +51,7 @@ class Piggy(PiggyParent):
                 
                 }
         # loop and print the menu...
-        for key in sorted(menu.keys()):w
+        for key in sorted(menu.keys()):
             print(key + ":" + menu[key][0])
         # store the user's answer
         ans = str.lower(input("Your selection: "))
