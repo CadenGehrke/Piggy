@@ -90,6 +90,8 @@ class Piggy(PiggyParent):
           time.sleep(1)
           self.left()
           time.sleep(0.5)
+
+  
     def ce(self):
       while True:
         self.servo(self.MIDPOINT)
@@ -109,7 +111,6 @@ class Piggy(PiggyParent):
             time.sleep(2)
             self.left()
             time.sleep(1)
-            
           elif L > R:
             self.left()
             time.sleep(1)
@@ -137,6 +138,20 @@ class Piggy(PiggyParent):
           elif LE > RI:
             self.left()
             time.sleep(1)
+            
+
+        
+      def swerve(self):
+        while True:
+          self.fwd()
+          for ang in range(self.MIDPOINT-400, 100):
+                self.servo(ang)
+                time.sleep(.1)
+                if self.read_distance() < 
+
+          
+          
+          
           
 
               
