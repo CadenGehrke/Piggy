@@ -45,12 +45,13 @@ class Piggy(PiggyParent):
                 "w": ("wallloop", self.wallloop),
                 "t": ("twall", self.twall),
                 "e": ("ce", self.ce),
-                "co": ("corn", self.corn)
+                "co": ("corn", self.corn),
+                "sw": ("sw", self.swerve)
                 
                 
                 }
         # loop and print the menu...
-        for key in sorted(menu.keys()):
+        for key in sorted(menu.keys()):w
             print(key + ":" + menu[key][0])
         # store the user's answer
         ans = str.lower(input("Your selection: "))
@@ -133,11 +134,11 @@ class Piggy(PiggyParent):
           time.sleep(1)
           LE = self.read_distance()
           if LE < RI:
-            self.right()
-            time.sleep(1)
+            self.turn_by_deg()
+            time.sleep(80)
           elif LE > RI:
-            self.left()
-            time.sleep(1)
+            self.turn_by_deg()
+            time.sleep(-80)
             
 
         
@@ -147,8 +148,8 @@ class Piggy(PiggyParent):
           for ang in range(self.MIDPOINT-400, 100):
                 self.servo(ang)
                 time.sleep(.1)
-                if self.read_distance():
-                  print("e")
+                if self.read_distance()
+                  
 
           
           
