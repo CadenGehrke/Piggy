@@ -145,20 +145,26 @@ class Piggy(PiggyParent):
         self.servo(self.MIDPOINT + 400)
         time.sleep(0.5)
         RD = self.read_distance()
+        self.servo(self.MIDPOINT - 400)
+        time.sleep(0.5)
+        LD = self.read_distance()
+        self.servo(self.MIDPOINT)
+        time.sleep(0.5)
+        CD = self.read_distance()
 
-        if left_distance < right_distance and left_distance < center_distance and left_distance < 400:
+        if LD < RD and LD < CD and LD < 400:
               print("Case 1")
               self.fwd(40,80)
               time.sleep(2.75)
               self.fwd(80,40)
               time.sleep(2.75)
-        elif center_distance < right_distance and center_distance < left_distance and center_distance < 400:
+        elif CD < RD and CD < LD and CD < 400:
           print("case 2")
           self.fwd(80,40)
           time.sleep(2.75)
           self.fwd(40,80)
           time.sleep(2.75)
-        elif left_distance > right_distance and right_distance < center_distance and right_distance < 400:
+        elif LDe > RD and RD < CD and RD < 400:
           print("case 4")
           self.fwd(80,40)
           time.sleep(2.75)
