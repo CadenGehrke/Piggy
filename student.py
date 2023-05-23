@@ -143,13 +143,13 @@ class Piggy(PiggyParent):
     def swev(self):
       while True:
         self.servo(self.MIDPOINT + 400)
-        time.sleep(0.5)
+        time.sleep(0.2)
         RD = self.read_distance()
         self.servo(self.MIDPOINT - 400)
-        time.sleep(0.5)
+        time.sleep(0.2)
         LD = self.read_distance()
         self.servo(self.MIDPOINT)
-        time.sleep(0.5)
+        time.sleep(0.2)
         CD = self.read_distance()
 
         if LD < RD and LD < CD and LD < 400:
