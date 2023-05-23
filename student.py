@@ -164,7 +164,7 @@ class Piggy(PiggyParent):
           time.sleep(2.75)
           self.fwd(40,80)
           time.sleep(2.75)
-        elif LDe > RD and RD < CD and RD < 400:
+        elif LD > RD and RD < CD and RD < 400:
           print("case 4")
           self.fwd(80,40)
           time.sleep(2.75)
